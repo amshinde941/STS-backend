@@ -30,12 +30,13 @@ app.use((req, res, next) => {
 });
 
 //Route middleware 
-app.use("/", () => {
-  res.status(200).send("connected successfully");
-}); 
 app.use("/school/", SchoolRouter);
 app.use("/student/", StudentRouter);
-app.use("/teacher/", TeacherRouter); 
+app.use("/teacher/", TeacherRouter);
+
+app.get("/", function (req, res) {
+  res.send("SIH STARTECH ");
+})
 
 //app.use('/api/posts',postRoute);
 
