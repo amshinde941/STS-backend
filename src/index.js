@@ -6,9 +6,9 @@ import connectDB from "./db/mongoose.js";
 dotenv.config();
 
 //import Routes 
-import {SchoolRouter} from './routes';
-import {StudentRouter} from './routes';
-import {TeacherRouter} from './routes'; 
+import {SchoolRouter} from './routes/index';
+import {StudentRouter} from './routes/index';
+import {TeacherRouter} from './routes/index'; 
 
 
 
