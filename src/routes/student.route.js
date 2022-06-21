@@ -1,6 +1,6 @@
 import express from "express";
-import { studentAuth } from "../middleware";
-import { loginStudent, fetchClass, addFeedback, fetchFeedback, allNotices, addDiary, fetchDiary, addAchievement } from "../controllers";  
+import { studentAuth } from "../middleware/index.js";
+import { loginStudent, fetchClass, addFeedback, fetchFeedback, allNotices, addDiary, fetchDiary, addAchievement } from "../controllers/index.js";  
 
 const StudentRouter = express.Router();
 

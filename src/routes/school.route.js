@@ -1,7 +1,6 @@
 import express from "express";
-import { schoolAuth } from "../middleware";
-import { allNotices, addNotice, createSchool, addTeachers, loginSchool, addFeedback, fetchFeedback, addClass, addEvent, replyFeedback } from "../controllers";
-import { School } from "../models";
+import { schoolAuth } from "../middleware/index.js";
+import { allNotices, addNotice, createSchool, addTeachers, loginSchool, addFeedback, fetchFeedback, addClass, addEvent, replyFeedback } from "../controllers/index.js";
 
 const SchoolRouter = express.Router();
 //Add auth controllers @amit purohit
