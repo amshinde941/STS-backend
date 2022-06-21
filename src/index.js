@@ -10,8 +10,6 @@ import {SchoolRouter} from './routes/index.js';
 import {StudentRouter} from './routes/index.js';
 import {TeacherRouter} from './routes/index.js'; 
 
-
-
 //connect to DB
 connectDB();
 
@@ -32,6 +30,9 @@ app.use((req, res, next) => {
 });
 
 //Route middleware 
+app.use("/", () => {
+  res.status(200).send("connected successfully");
+}); 
 app.use("/school/", SchoolRouter);
 app.use("/student/", StudentRouter);
 app.use("/teacher/", TeacherRouter); 
