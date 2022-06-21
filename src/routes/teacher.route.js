@@ -1,5 +1,5 @@
 import express from "express";
-import { teacherAuth } from "../middleware";
+import { teacherAuth } from "../middleware/index.js";
 import { 
   loginTeacher,
   fetchClass,
@@ -15,8 +15,7 @@ import {
   addStudents,
   addClass,
   addEvent,
-} from "../controllers";
-import { Teacher } from "../models";
+} from "../controllers/index.js"; 
 
 const TeacherRouter = express.Router();
 //Add auth controllers @mayur sarode

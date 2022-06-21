@@ -6,11 +6,9 @@ import connectDB from "./db/mongoose.js";
 dotenv.config();
 
 //import Routes 
-import {SchoolRouter} from './routes';
-import {StudentRouter} from './routes';
-import {TeacherRouter} from './routes'; 
-
-
+import {SchoolRouter} from './routes/index.js';
+import {StudentRouter} from './routes/index.js';
+import {TeacherRouter} from './routes/index.js'; 
 
 //connect to DB
 connectDB();
@@ -34,7 +32,11 @@ app.use((req, res, next) => {
 //Route middleware 
 app.use("/school/", SchoolRouter);
 app.use("/student/", StudentRouter);
-app.use("/teacher/", TeacherRouter); 
+app.use("/teacher/", TeacherRouter);
+
+app.get("/", function (req, res) {
+  res.send("SIH STARTECH ");
+})
 
 //app.use('/api/posts',postRoute);
 
